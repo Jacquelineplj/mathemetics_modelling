@@ -109,7 +109,7 @@ def timepass(grades,gradesPrev,tt,ias,rec,ex,isy,home,s):
         # again, save this to prevalence time-series:
         try:
             grade=metadata[i, 1].astype('S1').astype('i1')[0]  -1
-            grades[grade,tt:slots]=grades[grade,tt]+1
+            grades[grade,tt:slots]=grades[grade,tt]+1 # it saves the total num of people infected
             gradesPrev[grade,tt:slots,batchno]=gradesPrev[grade,tt,batchno]+1
         except:
             # teacher
